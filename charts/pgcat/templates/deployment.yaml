@@ -62,5 +62,5 @@ spec:
       volumes:
       - secret:
           defaultMode: 420
-          secretName: {{ include "pgcat.fullname" . }}
+          secretName: {{ default (include "pgcat.fullname" .) .Values.pgcatSecretName }}
         name: config

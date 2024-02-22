@@ -148,8 +148,12 @@ tolerations: []
 ##
 affinity: {}
 
+## Use an existing secret that contains pgcat configuration
+pgcatSecretName: ""
+
 ## PgCat configuration
 ## @param configuration [object]
+## Will be ignored if pgcatSecretName is set
 configuration:
   ## General pooler settings
   ## @param [object]
